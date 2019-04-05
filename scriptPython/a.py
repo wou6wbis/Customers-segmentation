@@ -23,7 +23,6 @@ def make_predict():
 	output = rez[0]
 	print (output)
 	return jsonify(results=int(output))
-	return "hello"
 
 if __name__ == '__main__':
 	app.run(port = 9000, debug = True)

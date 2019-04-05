@@ -13,8 +13,8 @@ public class Client {
     private String name;
     private String email;
     //private Gender gender;
-    private double income;
-    private double score;
+    private double ai;
+    private double sc;
 
     @ManyToOne
     private Manager manager;
@@ -27,8 +27,8 @@ public class Client {
         this.name = name;
         this.email = email;
         //this.gender=gender;
-        this.income = income;
-        this.score = score;
+        this.ai = income;
+        this.sc = score;
         this.manager = new Manager("");
     }
 
@@ -45,11 +45,11 @@ public class Client {
     }
 
     public double getIncome() {
-        return income;
+        return ai;
     }
 
     public double getScore() {
-        return score;
+        return sc;
     }
 
     public void setId(String id) {
@@ -65,11 +65,11 @@ public class Client {
     }
 
     public void setIncome(double income) {
-        this.income = income;
+        this.ai = income;
     }
 
     public void setScore(double score) {
-        this.score = score;
+        this.sc = score;
     }
 
     public Manager getManager() {

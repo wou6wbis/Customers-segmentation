@@ -3,6 +3,7 @@ package mainApp.controllers;
 import mainApp.entities.Client;
 import mainApp.entities.Manager;
 import mainApp.services.ClientService;
+import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -53,4 +54,9 @@ public class ClientController {
         clientService.deleteClient(id);
     }
 
+
+    @RequestMapping("/client/{id}/api")
+    public String getClusterClient(@PathVariable String id) throws JSONException {
+        return clientService.getClusterClient(id);
+    }
 }
