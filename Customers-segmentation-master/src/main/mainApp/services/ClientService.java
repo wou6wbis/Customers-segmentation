@@ -54,6 +54,7 @@ public class ClientService {
     }
 
 
+
     public String getString(InputStream in) throws IOException {
         Reader reader = new InputStreamReader(in, StandardCharsets.UTF_8);
         BufferedReader br = new BufferedReader(reader);
@@ -80,11 +81,13 @@ public class ClientService {
     }
 
 
-    public String getClusterClient(String id) throws JSONException {
+    public void clusterClient(String id) throws JSONException {
 
-        Optional<Client> client=clientRepo.findById(id);
-        double ai=client.get().getIncome();
-        double sc=client.get().getScore();
+        Optional<Client> client = (Optional<Client>) clientRepo.findById(id);
+        Client client1 = client.get();
+
+        double ai=client1.getIncome();
+        double sc=client1.getScore();
 
         String message;
         JSONObject json = new JSONObject();
@@ -123,13 +126,15 @@ public class ClientService {
             in.close();
             conn.disconnect();
 
-            return rez;
+            client1.setCluster(rez);
+
+            clientRepo.save(client1);
+
 
         } catch (Exception e) {
             System.out.println(e);
         }
 
-        return null;
     }
 
 }

@@ -1,5 +1,7 @@
 package mainApp.entities;
 
+import mainApp.entities.Manager;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -13,8 +15,9 @@ public class Client {
     private String name;
     private String email;
     //private Gender gender;
-    private double ai;
-    private double sc;
+    private double annualIncome;
+    private double spendingScore;
+    private String cluster;
 
     @ManyToOne
     private Manager manager;
@@ -22,13 +25,13 @@ public class Client {
     public Client() {
     }
 
-    public Client(String id, String name, String email, double income, double score, String managerId) {
+    public Client(String id, String name, String email, double income, double spendingScoreore, String managerId) {
         this.id = id;
         this.name = name;
         this.email = email;
         //this.gender=gender;
-        this.ai = income;
-        this.sc = score;
+        this.annualIncome = income;
+        this.spendingScore = spendingScoreore;
         this.manager = new Manager("");
     }
 
@@ -40,16 +43,13 @@ public class Client {
         return name;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
     public double getIncome() {
-        return ai;
+        return annualIncome;
     }
 
     public double getScore() {
-        return sc;
+        return spendingScore;
     }
 
     public void setId(String id) {
@@ -60,16 +60,28 @@ public class Client {
         this.name = name;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setIncome(double income) {
-        this.ai = income;
+    public String getCluster() {
+        return cluster;
     }
 
-    public void setScore(double score) {
-        this.sc = score;
+    public void setCluster(String cluster) {
+        this.cluster = cluster;
+    }
+
+    public void setIncome(double income) {
+        this.annualIncome = income;
+    }
+
+    public void setScore(double spendingScoreore) {
+        this.spendingScore = spendingScoreore;
     }
 
     public Manager getManager() {

@@ -55,8 +55,8 @@ public class ClientController {
     }
 
 
-    @RequestMapping("/client/{id}/api")
-    public String getClusterClient(@PathVariable String id) throws JSONException {
-        return clientService.getClusterClient(id);
+    @RequestMapping(method = RequestMethod.PUT, value="/client/{id}/api")
+    public void clusterClient(@PathVariable String id) throws JSONException {
+         clientService.clusterClient(id);
     }
 }

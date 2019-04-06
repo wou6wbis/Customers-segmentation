@@ -16,7 +16,7 @@ def make_predict():
 	d1 = data['ai']
 	d2 = data['sc']
 	d = [[d1,d2]]
-	print (d)
+	#print (d)
 	predict_request = d
 	#predict_request = np.array(predict_request)
 	rez =model.predict(predict_request)
