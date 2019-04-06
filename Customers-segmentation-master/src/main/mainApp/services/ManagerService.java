@@ -36,12 +36,12 @@ public class ManagerService {
 
     public void updateManager(String id, Manager manager) {
 
-       managerRepo.save(manager);
+        managerRepo.save(manager);
     }
 
 
     public void deleteManager(String id) {
 
-       managerRepo.deleteById(id);
+        managerRepo.deleteById(id);
     }
 }

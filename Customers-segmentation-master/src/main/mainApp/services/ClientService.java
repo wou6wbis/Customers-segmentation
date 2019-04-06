@@ -54,7 +54,6 @@ public class ClientService {
     }
 
 
-
     public String getString(InputStream in) throws IOException {
         Reader reader = new InputStreamReader(in, StandardCharsets.UTF_8);
         BufferedReader br = new BufferedReader(reader);
@@ -86,8 +85,8 @@ public class ClientService {
         Optional<Client> client = (Optional<Client>) clientRepo.findById(id);
         Client client1 = client.get();
 
-        double ai=client1.getIncome();
-        double sc=client1.getScore();
+        double ai = client1.getIncome();
+        double sc = client1.getScore();
 
         String message;
         JSONObject json = new JSONObject();

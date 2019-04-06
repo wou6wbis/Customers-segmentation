@@ -16,36 +16,36 @@ public class ManagerController {
     private ManagerService managerService;
 
     @RequestMapping("/manager")
-    public String hello(){
+    public String hello() {
         return "HI Manager";
     }
 
     @RequestMapping("/manager/managers")
-    public List<Manager> getAllManagers(){
+    public List<Manager> getAllManagers() {
 
         return managerService.getAllAManagers();
     }
 
 
     @RequestMapping("manager/{id}")
-    public Optional<Manager> getManager(@PathVariable String id){
+    public Optional<Manager> getManager(@PathVariable String id) {
         return managerService.getManager(id);
     }
 
 
-    @RequestMapping(method = RequestMethod.POST, value="/manager")
+    @RequestMapping(method = RequestMethod.POST, value = "/manager")
     public void addManager(@RequestBody Manager manager) {
         managerService.addManager(manager);
     }
 
 
-    @RequestMapping(method = RequestMethod.PUT, value="/manager/{id}")
+    @RequestMapping(method = RequestMethod.PUT, value = "/manager/{id}")
     public void updateManager(@RequestBody Manager manager, @PathVariable String id) {
-        managerService.updateManager(id,manager);
+        managerService.updateManager(id, manager);
     }
 
 
-    @RequestMapping(method = RequestMethod.DELETE, value="/manager/{id}")
+    @RequestMapping(method = RequestMethod.DELETE, value = "/manager/{id}")
     public void deleteManager(@PathVariable String id) {
         managerService.deleteManager(id);
     }

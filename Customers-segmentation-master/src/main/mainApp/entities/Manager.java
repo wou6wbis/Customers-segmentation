@@ -1,7 +1,8 @@
 package mainApp.entities;
 
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Manager {
@@ -35,7 +36,6 @@ public class Manager {
     public void setId(String id) {
         this.id = id;
     }
-
 
 
     public String getName() {
