@@ -136,4 +136,14 @@ public class ClientService {
 
     }
 
+
+    public List<Client> getClientsByCluster(String id, String cluster){
+
+        List<Client> clients = new ArrayList<>();
+        clientRepo.findByManager_IdAndCluster(id, cluster).
+                forEach(clients::add);
+        return clients;
+    }
+
+
 }

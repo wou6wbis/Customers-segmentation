@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Sat Apr 06 12:01:01 CET 2019:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0169-f24f-0f79-000004add4c0 
+Sat Apr 06 23:27:36 CET 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0169-f4c3-a518-000005ba2c00 
 on database directory memory:/home/syrine/PFA2/Customers-segmentation-master/testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@512ddf17 
 Loaded from file:/home/syrine/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation

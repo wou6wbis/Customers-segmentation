@@ -59,4 +59,12 @@ public class ClientController {
     public void clusterClient(@PathVariable String id) throws JSONException {
         clientService.clusterClient(id);
     }
+
+
+    @RequestMapping("/manager/{id}/clients/cluster/{cluster}")
+    public List<Client> getClientsByCluster(@PathVariable String id, @PathVariable String cluster) {
+
+        return clientService.getClientsByCluster(id, cluster);
+    }
+
 }
