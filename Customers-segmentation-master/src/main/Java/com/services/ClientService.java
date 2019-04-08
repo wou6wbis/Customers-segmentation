@@ -1,7 +1,7 @@
-package mainApp.services;
+package com.services;
 
-import mainApp.entities.Client;
-import mainApp.repositories.ClientRepo;
+import com.entities.Client;
+import com.repositories.ClientRepo;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;

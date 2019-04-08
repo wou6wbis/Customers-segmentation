@@ -1,17 +1,26 @@
-package mainApp.entities;
+package com.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
 
 public class Hr {
 
     //Human resources responsible
 
+    @Id @Column
+    private String id;
+    @Column
     private String name;
+    @Column
     private String email;
+    @Column
     private double salary;
 
     public Hr() {
     }
 
-    public Hr(String name, String email, double salary) {
+    public Hr(String id, String name, String email, double salary) {
+        this.id=id;
         this.name = name;
         this.email = email;
         this.salary = salary;

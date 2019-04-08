@@ -1,7 +1,7 @@
-package mainApp.controllers;
+package com.controllers;
 
-import mainApp.entities.Manager;
-import mainApp.services.ManagerService;
+import com.entities.Manager;
+import com.services.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

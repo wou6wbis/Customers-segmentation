@@ -1,19 +1,26 @@
-package mainApp.entities;
+package com.entities;
+
+import org.hibernate.annotations.JoinColumnOrFormula;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
+@Table(name = "client")
 public class Client {
 
 
-    @Id
+    @Id @JoinColumn
     private String id;
+    @Column
     private String name;
+    @Column
     private String email;
     //private Gender gender;
+    @Column
     private double income;
+    @Column
     private double score;
+    @Column
     private String cluster;
 
 //    private String username;
@@ -23,6 +30,9 @@ public class Client {
 //    private List<Role> roles;
 
     @ManyToOne
+    @JoinTable(name="manager_client",
+            joinColumns={@JoinColumn(name="client_id")},
+            inverseJoinColumns={@JoinColumn(name="manager_id")})
     private Manager manager;
 
     public Client() {

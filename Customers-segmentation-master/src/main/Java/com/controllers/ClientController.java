@@ -1,8 +1,8 @@
-package mainApp.controllers;
+package com.controllers;
 
-import mainApp.entities.Client;
-import mainApp.entities.Manager;
-import mainApp.services.ClientService;
+import com.entities.Client;
+import com.entities.Manager;
+import com.services.ClientService;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,7 +30,7 @@ public class ClientController {
 
 
     @RequestMapping("manager/{managerId}/clients/{id}")
-    public Optional<Client> getClient(@PathVariable String id) {
+    public Optional<Client> getClient(@PathVariable String id, @PathVariable String managerId) {
         return clientService.getClient(id);
     }
 
@@ -50,7 +50,7 @@ public class ClientController {
 
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/manager/{managerId}/clients/{id}")
-    public void deleteClient(@PathVariable String id) {
+    public void deleteClient(@PathVariable String id, @PathVariable String managerId) {
         clientService.deleteClient(id);
     }
 

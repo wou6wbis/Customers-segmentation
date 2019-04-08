@@ -1,7 +1,6 @@
-package mainApp.repositories;
+package com.repositories;
 
-import mainApp.entities.Client;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.entities.Client;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package mainApp.services;
+package com.services;
 
-import mainApp.entities.Manager;
-import mainApp.repositories.ManagerRepo;
+import com.entities.Manager;
+import com.repositories.ManagerRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
