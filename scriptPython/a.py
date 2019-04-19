@@ -1,3 +1,5 @@
+#! /usr/bin/env python
+
 import numpy as np
 from flask import Flask, abort, jsonify, request, json
 import pandas as pd 
